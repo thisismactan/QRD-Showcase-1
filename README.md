@@ -1,2 +1,2 @@
 # QRD-Showcase-1
-From QR&amp;D Showcase One: Which do Americans prefer, Italian or Mexican cuisine?
+From QR&amp;D Showcase One: Which do Americans prefer, Italian or Mexican cuisine? See [this link](https://www.quora.com/q/npntmhwjyxipxnxn/Showcase-One-Mexican-or-Italian-Quantifying-the-Debate) for more details.
