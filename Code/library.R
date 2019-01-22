@@ -6,6 +6,11 @@ library(jsonlite)
 library(ndjson)
 library(tidyverse)
 
+## Mapping
+library(leaflet)
+library(sf)
+library(USAboundaries)
+
 #### CUSTOM FUNCTIONS ####
 fread_to_tbl <- function(filepath) {
   require(data.table)
