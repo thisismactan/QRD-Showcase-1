@@ -4,6 +4,7 @@ source("Code/merge_data.R")
 
 ## Overlaid histogram of user residual
 reviews_cuisines %>%
+  filter(reviews >= 9) %>%
   ggplot(aes(x = user_resid, fill = as.factor(mexican))) +
   geom_density(col = "black", alpha = 0.5, position = "identity") +
   scale_fill_manual(name = "Cuisine", labels = c("Italian/pizza", "Mexican"), values = c("red", "green4")) +
@@ -29,7 +30,7 @@ reviews_cuisines %>%
   geom_bar(aes(y = ..prop..), col = "black", alpha = 0.5, position = "dodge2") +
   scale_fill_manual(name = "Cuisine", labels = c("Italian/pizza", "Mexican"), values = c("red", "green4")) +
   labs(title = "The Mexican-Italian Culinary Smackdown",
-       subtitle = "User preferences from Yelp1 reviews",
+       subtitle = "User preferences from Yelp reviews",
        x = "Stars",
        y = "Proportion")
 
@@ -50,6 +51,7 @@ reviews_cuisines %>%
   spread(mexican, stars)
 
 reviews_cuisines %>%
+  filter(reviews >= 9) %>%
   group_by(region) %>%
   mutate(n = n()) %>%
   group_by(mexican, region) %>%
